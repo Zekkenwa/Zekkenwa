@@ -1,5 +1,5 @@
 ## 🌟 About Me
-- 🎓 **Fresh graduate** (Diploma) in **Mechanical Engineering**, specializing in **Manufacturing Design**.
+- 🎓 **Assosiate Degree** in **Mechanical Engineering**, specializing in **Manufacturing Design**.
 - 💻 **Proficient in design software**: AutoCAD Mechanical, Inventor, Mastercam X5, and SolidWorks.
 - 🤖 Familiar with **Arduino IDE** and **Microsoft Visual Studio**, blending **programming and engineering expertise**.
 - 🛠 **Hands-on experience** with machining processes: milling, lathe, turning, cutting, and CNC (2-axis and 3-axis).
