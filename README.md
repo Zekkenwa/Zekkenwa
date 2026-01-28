@@ -27,6 +27,4 @@
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Zekkenwa&layout=compact&theme=tokyonight)
 
-![Profile Visitors](https://visitor-badge.glitch.me/badge?page_id=Zekkenwa.Zekkenwa)
-
 </div>
