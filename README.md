@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=458B73&center=true&vCenter=true&width=500&lines=Mechanical+Engineer;Manufacturing+Design;Japanese+Learner+(N5);Sword+Art+Online+Fan" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=458B73&center=true&vCenter=true&width=500&lines=Mechanical+Engineer;Manufacturing+Design;Japanese+Learner+(N5);SoL+Anime+Enjoyer" alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -26,13 +26,7 @@
 ---
 
 ## 🛠 Tech Stack & Tools
-<p align="left">
-  <img src="https://img.shields.io/badge/autodesk-E01E22?style=for-the-badge&logo=autodesk&logoColor=white" />
-  <img src="https://img.shields.io/badge/AutoCAD-221E1F?style=for-the-badge&logo=autodesk&logoColor=white" />
-  <img src="https://img.shields.io/badge/SolidWorks-DA1F28?style=for-the-badge&logo=solidworks&logoColor=white" />
-  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" />
-  <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white" />
-</p>
+[![My Skills](https://skillicons.dev/icons?i=autocad,arduino,visualstudio,cpp,js,nextjs,prisma,tailwind)](https://skillicons.dev)
 
 ---
 
