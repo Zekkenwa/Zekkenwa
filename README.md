@@ -30,6 +30,14 @@
 
 ---
 
+## 🤝 Connect With Me
+- 📍 **Location**: Depok, Indonesia  
+- 📧 **Email**: [chalsinglalim@gmail.com](mailto:chalsinglalim@gmail.com)  
+- 🔗 **LinkedIn**: [linkedin.com/in/rafaraihan/](https://linkedin.com/in/rafaraihan/)  
+
+---
+
+
 ## 📈 Dashboard & Anime Activity
 <!-- MAL_STATS:START -->
 ![Anime Days](https://img.shields.io/badge/Anime%20Days-loading-lightgrey)
