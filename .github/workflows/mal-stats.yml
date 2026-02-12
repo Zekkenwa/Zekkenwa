@@ -1,0 +1,41 @@
+name: Update MAL badges
+
+on:
+  schedule:
+    - cron: "0 */12 * * *" # every 12 hours
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch MAL stats and update README
+        run: |
+          USER="RFA-Chan"
+          API="https://api.jikan.moe/v4/users/${USER}/statistics"
+
+          DATA=$(curl -s "$API")
+
+          ANIME_DAYS=$(echo "$DATA" | jq -r '.data.anime.days_watched')
+          MANGA_DAYS=$(echo "$DATA" | jq -r '.data.manga.days_read')
+          MEAN_SCORE=$(echo "$DATA" | jq -r '.data.anime.mean_score')
+          TOTAL_ENTRIES=$(echo "$DATA" | jq -r '(.data.anime.total_entries + .data.manga.total_entries)')
+
+          BADGES="\
+![Anime Days](https://img.shields.io/badge/Anime%20Days-${ANIME_DAYS}-brightgreen)\n\
+![Manga Days](https://img.shields.io/badge/Manga%20Days-${MANGA_DAYS}-blue)\n\
+![Mean Score](https://img.shields.io/badge/Mean%20Score-${MEAN_SCORE}-orange)\n\
+![Total Entries](https://img.shields.io/badge/Total%20Entries-${TOTAL_ENTRIES}-purple)"
+
+          perl -0777 -i -pe "s/<!-- MAL_STATS:START -->.*<!-- MAL_STATS:END -->/<!-- MAL_STATS:START -->\n$BADGES\n<!-- MAL_STATS:END -->/s" README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          git commit -m "Update MAL badges" || exit 0
+          git push
