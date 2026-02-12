@@ -1,47 +1,51 @@
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=458B73&center=true&vCenter=true&width=435&lines=Hi+there!+I'm+Zekkenwa;Mechanical+Engineer;Tech+Enthusiast;Anime+Lover" alt="Typing SVG" />
+</h1>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=458B73&height=150&section=header&text=Zekkenwa&fontSize=60" />
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGI4YmRjYjExYmRjYjExYmRjYjExYmRjYjExYmRjYjExYmRjYjEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/134vVkHV9wQWqY/giphy.gif" width="600" />
 </p>
 
-# <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGI4YmRjYjExYmRjYjExYmRjYjExYmRjYjExYmRjYjExYmRjYjEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/134vVkHV9wQWqY/giphy.gif" width="40" /> Konnichiwa! I'm Zekkenwa
-
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=Zekkenwa&color=458B73&style=flat-square&label=VISITORS" />
-  <img src="https://img.shields.io/badge/Japanese-N5_Level-blue?style=flat-square&logo=japan-post" />
-  <img src="https://img.shields.io/badge/TOEIC-865%2F990-success?style=flat-square" />
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Zekkenwa&color=458B73&style=for-the-badge&label=PROFILE+VIEWS" alt="Zekkenwa" />
 </p>
 
 ---
 
 ## 🌟 About Me
-- 🎓 **Mechanical Engineer** (Associate Degree).
-- 💻 **Design Expert**: AutoCAD, Inventor, SolidWorks, Mastercam.
-- 🤖 **Mechatronics**: Arduino IDE & Visual Studio.
-- 🛠 **CNC Specialist**: 2-axis & 3-axis Machining.
-- 🇯🇵 **Sword Art Online Enthusiast** & Japanese Learner.
+- 🎓 **Associate Degree** in **Mechanical Engineering**, specializing in **Manufacturing Design**.
+- 💻 **Proficient in design software**: AutoCAD Mechanical, Inventor, Mastercam X5, and SolidWorks.
+- 🤖 Familiar with **Arduino IDE** and **Microsoft Visual Studio**, blending **programming and engineering expertise**.
+- 🛠 **Hands-on experience** with machining processes: milling, lathe, turning, cutting, and CNC (2-axis and 3-axis).
+- 🔬 Passionate about **material science**; academic projects include:
+  - Designing a **1-ton jib crane**.
+  - Developing the **PEDC-06 Nano Carbon Powder machine**.
+- 📈 Graduated with a **GPA of 3.45** and a strong foundation in mechanical design.
+- 🏆 Certified **Mechanical Maintenance Technician** (LSP LMI) and scored **865/990** on the TOEIC Listening & Reading test.
+- 🇯🇵 Currently improving **Japanese** proficiency to **N5 level**.
 
 ---
 
-## 🛠 Tech Stack
-[![My Skills](https://skillicons.dev/icons?i=autocad,arduino,visualstudio,cpp,js,nextjs,prisma,tailwind)](https://skillicons.dev)
-
----
-
-## 📈 GitHub Stats
+## 📊 GitHub Metrics
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Zekkenwa&show_icons=true&theme=nord&hide_border=true&cache_seconds=1800" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zekkenwa&layout=compact&theme=nord&hide_border=true&cache_seconds=1800" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Zekkenwa&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Zekkenwa's GitHub stats" width="400" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zekkenwa&layout=compact&theme=tokyonight&hide_border=true" alt="Zekkenwa's languages" width="300" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Zekkenwa&theme=tokyonight&hide_border=true" alt="Zekkenwa's GitHub streak" />
 </p>
 
 ---
 
-## 📺 MyAnimeList Activity
+## 📺 MyAnimeList Stats (RFA-Chan)
 <p align="center">
   <a href="https://myanimelist.net/profile/RFA-Chan">
-    <img src="https://img.shields.io/badge/MyAnimeList-Profile-blue?style=for-the-badge&logo=myanimelist&logoColor=white" />
+    <img src="https://myanimelist-readme-stats.vercel.app/api/anime?username=RFA-Chan&type=watching&theme=dark" alt="RFA-Chan's Anime Stats" />
   </a>
-  <br>
-  <img src="https://mal-badges.netlify.app/api/user/RFA-Chan/anime?theme=dark" />
 </p>
+
+---
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=458B73&height=100&section=footer" />
