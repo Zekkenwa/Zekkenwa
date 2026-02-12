@@ -24,11 +24,13 @@ jobs:
           MEAN_SCORE=$(echo "$DATA" | jq -r '.data.anime.mean_score')
           TOTAL_ENTRIES=$(echo "$DATA" | jq -r '(.data.anime.total_entries + .data.manga.total_entries)')
 
-          BADGES="\
-![Anime Days](https://img.shields.io/badge/Anime%20Days-${ANIME_DAYS}-brightgreen)\n\
-![Manga Days](https://img.shields.io/badge/Manga%20Days-${MANGA_DAYS}-blue)\n\
-![Mean Score](https://img.shields.io/badge/Mean%20Score-${MEAN_SCORE}-orange)\n\
-![Total Entries](https://img.shields.io/badge/Total%20Entries-${TOTAL_ENTRIES}-purple)"
+          BADGES=$(cat <<EOF
+![Anime Days](https://img.shields.io/badge/Anime%20Days-${ANIME_DAYS}-brightgreen)
+![Manga Days](https://img.shields.io/badge/Manga%20Days-${MANGA_DAYS}-blue)
+![Mean Score](https://img.shields.io/badge/Mean%20Score-${MEAN_SCORE}-orange)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-${TOTAL_ENTRIES}-purple)
+EOF
+          )
 
           perl -0777 -i -pe "s/<!-- MAL_STATS:START -->.*<!-- MAL_STATS:END -->/<!-- MAL_STATS:START -->\n$BADGES\n<!-- MAL_STATS:END -->/s" README.md
 
