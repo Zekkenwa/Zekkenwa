@@ -31,21 +31,9 @@
 ---
 
 ## 📈 Dashboard & Anime Activity
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Zekkenwa&show_icons=true&theme=dracula&hide_border=true" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zekkenwa&layout=compact&theme=dracula&hide_border=true" width="48%" />
-</p>
-
-<p align="center">
-  <a href="https://myanimelist.net/profile/RFA-Chan">
-    <img src="https://mal-badges.netlify.app/api/user/RFA-Chan/anime?theme=dark" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/HerXayah/HerXayah/main/assets/line.gif" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Zekkenwa&color=458B73&style=flat-square&label=VISTORS+TOTAL" />
-</p>
+<!-- MAL_STATS:START -->
+![Anime Days](https://img.shields.io/badge/Anime%20Days-loading-lightgrey)
+![Manga Days](https://img.shields.io/badge/Manga%20Days-loading-lightgrey)
+![Mean Score](https://img.shields.io/badge/Mean%20Score-loading-lightgrey)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-loading-lightgrey)
+<!-- MAL_STATS:END -->
