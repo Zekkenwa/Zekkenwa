@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=458B73&center=true&vCenter=true&width=500&lines=Mechanical+Engineer;Manufacturing+Design;Japanese+Learner+(N4);SoL+Anime+Enjoyer" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=458B73&center=true&vCenter=true&width=500&lines=Mechanical+Engineer;Manufacturing+Design;Japanese+Learner+(N4);CAD+and+Simulation" alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -20,13 +20,13 @@
 - 🛠 Experienced with **CNC (2-axis & 3-axis)**, Milling, and Lathe.
 - 🏆 Licensed **Mechanical Maintenance Technician** (LSP LMI).
 - 📈 English Score: **865/990** (TOEIC).
-- 🇯🇵 Language: **Japanese (N5 Level)**.
+- 🇯🇵 Language: **Japanese (N4 Level)**.
 </p>
 
 ---
 
 ## 🛠 Tech Stack & Tools
-[![My Skills](https://skillicons.dev/icons?i=autocad,arduino,visualstudio,cpp,js,nextjs,prisma,tailwind)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=autocad,pr,arduino,visualstudio,cpp,js,nextjs,prisma,tailwind)](https://skillicons.dev)
 
 ---
 
