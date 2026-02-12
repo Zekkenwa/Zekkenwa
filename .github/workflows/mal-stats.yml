@@ -32,7 +32,19 @@ jobs:
           EOF
           )
 
-          perl -0777 -i -pe "s/<!-- MAL_STATS:START -->.*<!-- MAL_STATS:END -->/<!-- MAL_STATS:START -->\n$BADGES\n<!-- MAL_STATS:END -->/s" README.md
+          BADGES="$BADGES" python - <<'PY'
+          import os, re, pathlib
+          badges = os.environ["BADGES"]
+          path = pathlib.Path("README.md")
+          readme = path.read_text()
+          readme = re.sub(
+              r"<!-- MAL_STATS:START -->.*<!-- MAL_STATS:END -->",
+              f"<!-- MAL_STATS:START -->\n{badges}\n<!-- MAL_STATS:END -->",
+              readme,
+              flags=re.S
+          )
+          path.write_text(readme)
+          PY
 
       - name: Commit changes
         run: |
