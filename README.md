@@ -33,7 +33,8 @@
 ## 🤝 Connect With Me
 - 📍 **Location**: Depok, Indonesia  
 - 📧 **Email**: [chalsinglalim@gmail.com](mailto:chalsinglalim@gmail.com)  
-- 🔗 **LinkedIn**: [linkedin.com/in/rafaraihan/](https://linkedin.com/in/rafaraihan/)  
+- 🔗 **LinkedIn**: [linkedin.com/in/rafaraihan/](https://linkedin.com/in/rafaraihan/)
+- https://tako.id/Zekkenwa  
 
 ---
 
