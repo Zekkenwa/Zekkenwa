@@ -41,8 +41,8 @@
 
 ## 📈 Dashboard & Anime Activity
 <!-- MAL_STATS:START -->
-![Anime Days](https://img.shields.io/badge/Anime%20Days-null-brightgreen)
-![Manga Days](https://img.shields.io/badge/Manga%20Days-null-blue)
-![Mean Score](https://img.shields.io/badge/Mean%20Score-null-orange)
-![Total Entries](https://img.shields.io/badge/Total%20Entries-null-purple)
+![Anime Days](https://img.shields.io/badge/Anime%20Days-110.5-brightgreen)
+![Manga Days](https://img.shields.io/badge/Manga%20Days-14.7-blue)
+![Mean Score](https://img.shields.io/badge/Mean%20Score-7.87-orange)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-667-purple)
 <!-- MAL_STATS:END -->
