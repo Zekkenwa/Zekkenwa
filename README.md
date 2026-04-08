@@ -34,7 +34,8 @@
 - 📍 **Location**: Depok, Indonesia  
 - 📧 **Email**: [chalsinglalim@gmail.com](mailto:chalsinglalim@gmail.com)  
 - 🔗 **LinkedIn**: [linkedin.com/in/rafaraihan/](https://linkedin.com/in/rafaraihan/)
-- https://tako.id/Zekkenwa  
+- 🎁 **Support Me** https://tako.id/Zekkenwa  
+- 💎 **My Portfolio** https://zekkenwa.github.io/me/
 
 ---
 
