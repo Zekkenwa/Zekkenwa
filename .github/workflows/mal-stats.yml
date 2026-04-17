@@ -5,6 +5,9 @@ on:
     - cron: "0 */12 * * *" # every 12 hours
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -14,15 +17,24 @@ jobs:
 
       - name: Fetch MAL stats and update README
         run: |
+          set -euo pipefail
+
           USER="RFA-Chan"
           API="https://api.jikan.moe/v4/users/${USER}/statistics"
 
           DATA=$(curl -s "$API")
 
+          echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, missing .data"; exit 1; }
+
           ANIME_DAYS=$(echo "$DATA" | jq -r '.data.anime.days_watched')
           MANGA_DAYS=$(echo "$DATA" | jq -r '.data.manga.days_read')
           MEAN_SCORE=$(echo "$DATA" | jq -r '.data.anime.mean_score')
           TOTAL_ENTRIES=$(echo "$DATA" | jq -r '(.data.anime.total_entries + .data.manga.total_entries)')
+
+          [ "$ANIME_DAYS" != "null" ] || { echo "Error: ANIME_DAYS is null"; exit 1; }
+          [ "$MANGA_DAYS" != "null" ] || { echo "Error: MANGA_DAYS is null"; exit 1; }
+          [ "$MEAN_SCORE" != "null" ] || { echo "Error: MEAN_SCORE is null"; exit 1; }
+          [ "$TOTAL_ENTRIES" != "null" ] || { echo "Error: TOTAL_ENTRIES is null"; exit 1; }
 
           BADGES=$(cat <<EOF
           ![Anime Days](https://img.shields.io/badge/Anime%20Days-${ANIME_DAYS}-brightgreen)
