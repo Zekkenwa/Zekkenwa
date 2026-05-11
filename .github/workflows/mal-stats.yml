@@ -22,9 +22,17 @@ jobs:
           USER="RFA-Chan"
           API="https://api.jikan.moe/v4/users/${USER}/statistics"
 
-          DATA=$(curl -s "$API")
+          response=$(curl -s -w "\n%{http_code}" "$API")
+DATA=$(echo "$response" | sed '$d')
+HTTP_STATUS=$(echo "$response" | tail -n1)
 
-          echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, missing .data"; exit 1; }
+if [ "$HTTP_STATUS" != "200" ]; then
+  echo "Error: API request failed with status $HTTP_STATUS"
+  echo "$DATA"
+  exit 1
+fi
+
+echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, missing .data"; exit 1; }
 
           ANIME_DAYS=$(echo "$DATA" | jq -r '.data.anime.days_watched')
           MANGA_DAYS=$(echo "$DATA" | jq -r '.data.manga.days_read')
