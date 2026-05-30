@@ -21,18 +21,34 @@ jobs:
 
           USER="RFA-Chan"
           API="https://api.jikan.moe/v4/users/${USER}/statistics"
+          MAX_RETRIES=3
+          RETRY_DELAY=5
 
-          response=$(curl -s -w "\n%{http_code}" "$API")
-DATA=$(echo "$response" | sed '$d')
-HTTP_STATUS=$(echo "$response" | tail -n1)
+          # Retry logic with exponential backoff
+          for attempt in $(seq 1 $MAX_RETRIES); do
+            echo "Attempt $attempt of $MAX_RETRIES..."
+            response=$(curl -s -w "\n%{http_code}" --max-time 10 --retry 2 "$API" || true)
+            HTTP_STATUS=$(echo "$response" | tail -n1)
+            
+            if [ "$HTTP_STATUS" = "200" ]; then
+              DATA=$(echo "$response" | sed '$d')
+              break
+            elif [ "$HTTP_STATUS" = "429" ]; then
+              echo "Rate limited (429). Waiting before retry..."
+              sleep $((RETRY_DELAY * attempt))
+              continue
+            elif [ $attempt -lt $MAX_RETRIES ]; then
+              echo "Request failed with status $HTTP_STATUS. Retrying..."
+              sleep $RETRY_DELAY
+              continue
+            else
+              echo "Error: API request failed with status $HTTP_STATUS after $MAX_RETRIES attempts"
+              exit 1
+            fi
+          done
 
-if [ "$HTTP_STATUS" != "200" ]; then
-  echo "Error: API request failed with status $HTTP_STATUS"
-  echo "$DATA"
-  exit 1
-fi
-
-echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, missing .data"; exit 1; }
+          # Validate response
+          echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, missing .data"; exit 1; }
 
           ANIME_DAYS=$(echo "$DATA" | jq -r '.data.anime.days_watched')
           MANGA_DAYS=$(echo "$DATA" | jq -r '.data.manga.days_read')
@@ -68,8 +84,7 @@ echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, 
 
       - name: Commit changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "Update MAL badges" || exit 0
-          git push
+          git diff --cached --quiet || (git commit -m "Update MAL badges" && git push)
