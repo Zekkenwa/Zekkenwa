@@ -42,8 +42,8 @@
 
 ## 📈 anime type shi
 <!-- MAL_STATS:START -->
-![Anime Days](https://img.shields.io/badge/Anime%20Days-110.6-brightgreen)
+![Anime Days](https://img.shields.io/badge/Anime%20Days-110.9-brightgreen)
 ![Manga Days](https://img.shields.io/badge/Manga%20Days-14.7-blue)
 ![Mean Score](https://img.shields.io/badge/Mean%20Score-7.87-orange)
-![Total Entries](https://img.shields.io/badge/Total%20Entries-669-purple)
+![Total Entries](https://img.shields.io/badge/Total%20Entries-671-purple)
 <!-- MAL_STATS:END -->
