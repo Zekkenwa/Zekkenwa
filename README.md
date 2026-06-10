@@ -26,7 +26,7 @@
 ---
 
 ## 🛠 Tech Stack & Tools
-[![My Skills](https://skillicons.dev/icons?i=autocad,pr,arduino,visualstudio,cpp,js,nextjs,prisma,tailwind)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=autocad,arduino,visualstudio,cpp,js,nextjs,prisma,tailwind)](https://skillicons.dev)
 
 ---
 
