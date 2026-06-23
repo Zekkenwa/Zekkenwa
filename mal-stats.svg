@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="520" viewBox="0 0 480 520">
+  <defs>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .card { animation: fadeIn 0.6s ease-out; }
+      .stat-group { animation: fadeIn 0.6s ease-out backwards; }
+      .stat-group-1 { animation-delay: 0.1s; }
+      .stat-group-2 { animation-delay: 0.2s; }
+      .stat-group-3 { animation-delay: 0.3s; }
+      .stat-group-4 { animation-delay: 0.4s; }
+    </style>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#458B73;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#458B73;stop-opacity:0.05" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Card background -->
+  <rect width="480" height="520" rx="12" fill="#161b22" stroke="#458B73" stroke-width="1" stroke-opacity="0.4" class="card"/>
+  
+  <!-- Header background -->
+  <rect width="480" height="56" rx="12" fill="url(#headerGrad)"/>
+  <rect y="12" width="480" height="44" fill="url(#headerGrad)"/>
+  
+  <!-- Header -->
+  <g class="stat-group stat-group-1">
+    <text x="24" y="28" fill="#5aab8f" font-size="11" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif" text-transform="uppercase" letter-spacing="1.5">MY ANIME LIST</text>
+    <text x="24" y="46" fill="#e6edf3" font-size="16" font-weight="700" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ“Š RFA-Chan's Stats</text>
+    <text x="456" y="38" fill="#6e7681" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">myanimelist.net</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="24" y1="62" x2="456" y2="62" stroke="#458B73" stroke-opacity="0.2" stroke-width="1"/>
+  
+  <!-- Anime Stats Section -->
+  <g class="stat-group stat-group-2">
+    <text x="24" y="84" fill="#5aab8f" font-size="12" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">ðŸŽ¬ ANIME</text>
+    
+    <!-- Stats row -->
+    <text x="24" y="100" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">â± Days Watched</text>
+    <text x="24" y="118" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">112.1</text>
+    <text x="134" y="100" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">â–¶ Episodes</text>
+    <text x="134" y="118" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">7,865</text>
+    <text x="244" y="100" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">â­ Mean Score</text>
+    <text x="244" y="118" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">7.87</text>
+    <text x="354" y="100" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ“‹ Entries</text>
+    <text x="354" y="118" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">604</text>
+    
+    <!-- Progress bar -->
+    <rect x="24" y="142" width="432" height="8" rx="4" fill="#21262d"/>
+    <clipPath id="clip-142-24"><rect x="24" y="142" width="432" height="8" rx="4"/></clipPath>
+    <g clip-path="url(#clip-142-24)">
+    <rect x="24" y="142" width="5.7218543046357615" height="8" fill="#458B73"/>
+    <rect x="29.721854304635762" y="142" width="321.1390728476821" height="8" fill="#3fb950"/>
+    <rect x="350.86092715231786" y="142" width="5.7218543046357615" height="8" fill="#d29922"/>
+    <rect x="356.5827814569536" y="142" width="12.158940397350994" height="8" fill="#f85149"/>
+    <rect x="368.7417218543046" y="142" width="87.25827814569537" height="8" fill="#6e7681"/>
+    </g>
+    
+    <!-- Legend -->
+    <circle cx="28" cy="162" r="4" fill="#458B73"/>
+    <text x="38" y="166" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">Watching (8)</text>
+    <circle cx="128" cy="162" r="4" fill="#3fb950"/>
+    <text x="138" y="166" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">Completed (449)</text>
+    <circle cx="238" cy="162" r="4" fill="#d29922"/>
+    <text x="248" y="166" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">On Hold (8)</text>
+    <circle cx="338" cy="162" r="4" fill="#f85149"/>
+    <text x="348" y="166" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">Dropped (17)</text>
+    <circle cx="423" cy="162" r="4" fill="#6e7681"/>
+    <text x="433" y="166" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">PTW (122)</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="24" y1="180" x2="456" y2="180" stroke="#458B73" stroke-opacity="0.15" stroke-width="1"/>
+  
+  <!-- Manga Stats Section -->
+  <g class="stat-group stat-group-3">
+    <text x="24" y="202" fill="#5aab8f" font-size="12" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ“– MANGA</text>
+    
+    <text x="24" y="218" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">â± Days Read</text>
+    <text x="24" y="236" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">14.7</text>
+    <text x="134" y="218" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ“„ Chapters</text>
+    <text x="134" y="236" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">2,460</text>
+    <text x="244" y="218" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ“š Volumes</text>
+    <text x="244" y="236" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">129</text>
+    <text x="354" y="218" fill="#8b949e" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ“‹ Entries</text>
+    <text x="354" y="236" fill="#e6edf3" font-size="16" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">69</text>
+    
+    <!-- Manga progress bar -->
+    <rect x="24" y="260" width="432" height="8" rx="4" fill="#21262d"/>
+    <clipPath id="clip-260-24"><rect x="24" y="260" width="432" height="8" rx="4"/></clipPath>
+    <g clip-path="url(#clip-260-24)">
+    <rect x="24" y="260" width="137.7391304347826" height="8" fill="#458B73"/>
+    <rect x="161.7391304347826" y="260" width="68.8695652173913" height="8" fill="#3fb950"/>
+    <rect x="230.60869565217388" y="260" width="12.521739130434783" height="8" fill="#d29922"/>
+    <rect x="243.13043478260866" y="260" width="12.521739130434783" height="8" fill="#f85149"/>
+    <rect x="255.65217391304344" y="260" width="200.34782608695653" height="8" fill="#6e7681"/>
+    </g>
+    
+    <!-- Legend -->
+    <circle cx="28" cy="280" r="4" fill="#458B73"/>
+    <text x="38" y="284" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">Reading (22)</text>
+    <circle cx="128" cy="280" r="4" fill="#3fb950"/>
+    <text x="138" y="284" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">Completed (11)</text>
+    <circle cx="238" cy="280" r="4" fill="#d29922"/>
+    <text x="248" y="284" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">On Hold (2)</text>
+    <circle cx="338" cy="280" r="4" fill="#f85149"/>
+    <text x="348" y="284" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">Dropped (2)</text>
+    <circle cx="423" cy="280" r="4" fill="#6e7681"/>
+    <text x="433" y="284" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">PTR (32)</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="24" y1="298" x2="456" y2="298" stroke="#458B73" stroke-opacity="0.15" stroke-width="1"/>
+  
+  <!-- Favorites Section -->
+  <g class="stat-group stat-group-4">
+    <text x="24" y="320" fill="#5aab8f" font-size="12" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">â¤ FAVORITE ANIME</text>
+    <circle cx="28" cy="340" r="3" fill="#458B73"/>
+    <text x="38" y="344" fill="#e6edf3" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">Spy x Family Movie: Code: White</text>
+    <text x="456" y="344" fill="#6e7681" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">Movie Â· 2023</text>
+    <circle cx="28" cy="362" r="3" fill="#458B73"/>
+    <text x="38" y="366" fill="#e6edf3" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">Sekai Saikou no Ansatsusha, Isekai Kizoku ni Te...</text>
+    <text x="456" y="366" fill="#6e7681" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">TV Â· 2021</text>
+    <circle cx="28" cy="384" r="3" fill="#458B73"/>
+    <text x="38" y="388" fill="#e6edf3" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">Kono Subarashii Sekai ni Shukufuku wo! Movie: K...</text>
+    <text x="456" y="388" fill="#6e7681" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">Movie Â· 2019</text>
+    <circle cx="28" cy="406" r="3" fill="#458B73"/>
+    <text x="38" y="410" fill="#e6edf3" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">Kono Subarashii Sekai ni Shukufuku wo!</text>
+    <text x="456" y="410" fill="#6e7681" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">TV Â· 2016</text>
+    <circle cx="28" cy="428" r="3" fill="#458B73"/>
+    <text x="38" y="432" fill="#e6edf3" font-size="11" font-family="Segoe UI, Ubuntu, sans-serif">Yahari Ore no Seishun Love Comedy wa Machigatte...</text>
+    <text x="456" y="432" fill="#6e7681" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">TV Â· 2020</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="24" y1="456" x2="456" y2="456" stroke="#458B73" stroke-opacity="0.15" stroke-width="1"/>
+  
+  <!-- Recently Watched -->
+  <g class="stat-group stat-group-4">
+    <text x="24" y="476" fill="#5aab8f" font-size="12" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif">ðŸ• RECENTLY UPDATED</text>
+    <text x="32" y="494" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">â–¸ Mahou no Princess Minky Momo</text>
+    <text x="456" y="494" fill="#458B73" font-size="10" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">â˜… 7</text>
+    <text x="32" y="512" fill="#8b949e" font-size="10" font-family="Segoe UI, Ubuntu, sans-serif">â–¸ Mayonaka Heart Tune</text>
+    <text x="456" y="512" fill="#458B73" font-size="10" font-weight="600" font-family="Segoe UI, Ubuntu, sans-serif" text-anchor="end">â˜… 7</text>
+  </g>
+</svg>
