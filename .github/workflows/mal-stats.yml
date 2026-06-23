@@ -1,8 +1,8 @@
-name: Update MAL badges
+name: Update MAL Stats
 
 on:
   schedule:
-    - cron: "0 */12 * * *" # every 12 hours
+    - cron: "30 3 * * *" # once daily at 03:30 UTC
   workflow_dispatch:
 
 permissions:
@@ -15,76 +15,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch MAL stats and update README
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate MAL stats card
+        id: generate
+        env:
+          MAL_USER: "RFA-Chan"
+          OUTPUT_PATH: "mal-stats.svg"
+        run: python .github/scripts/generate-mal-card.py
+        continue-on-error: true
+
+      - name: Check generation result
+        if: steps.generate.outcome == 'failure'
         run: |
-          set -euo pipefail
+          echo "::warning::MAL stats generation failed (API may be down). Skipping update."
+          exit 0
 
-          USER="RFA-Chan"
-          API="https://api.jikan.moe/v4/users/${USER}/statistics"
-          MAX_RETRIES=3
-          RETRY_DELAY=5
-
-          # Retry logic with exponential backoff
-          for attempt in $(seq 1 $MAX_RETRIES); do
-            echo "Attempt $attempt of $MAX_RETRIES..."
-            response=$(curl -s -w "\n%{http_code}" --max-time 10 --retry 2 "$API" || true)
-            HTTP_STATUS=$(echo "$response" | tail -n1)
-            
-            if [ "$HTTP_STATUS" = "200" ]; then
-              DATA=$(echo "$response" | sed '$d')
-              break
-            elif [ "$HTTP_STATUS" = "429" ]; then
-              echo "Rate limited (429). Waiting before retry..."
-              sleep $((RETRY_DELAY * attempt))
-              continue
-            elif [ $attempt -lt $MAX_RETRIES ]; then
-              echo "Request failed with status $HTTP_STATUS. Retrying..."
-              sleep $RETRY_DELAY
-              continue
-            else
-              echo "Error: API request failed with status $HTTP_STATUS after $MAX_RETRIES attempts"
-              exit 1
-            fi
-          done
-
-          # Validate response
-          echo "$DATA" | jq -e '.data' >/dev/null || { echo "Error: Invalid API response, missing .data"; exit 1; }
-
-          ANIME_DAYS=$(echo "$DATA" | jq -r '.data.anime.days_watched')
-          MANGA_DAYS=$(echo "$DATA" | jq -r '.data.manga.days_read')
-          MEAN_SCORE=$(echo "$DATA" | jq -r '.data.anime.mean_score')
-          TOTAL_ENTRIES=$(echo "$DATA" | jq -r '(.data.anime.total_entries + .data.manga.total_entries)')
-
-          [ "$ANIME_DAYS" != "null" ] || { echo "Error: ANIME_DAYS is null"; exit 1; }
-          [ "$MANGA_DAYS" != "null" ] || { echo "Error: MANGA_DAYS is null"; exit 1; }
-          [ "$MEAN_SCORE" != "null" ] || { echo "Error: MEAN_SCORE is null"; exit 1; }
-          [ "$TOTAL_ENTRIES" != "null" ] || { echo "Error: TOTAL_ENTRIES is null"; exit 1; }
-
-          BADGES=$(cat <<EOF
-          ![Anime Days](https://img.shields.io/badge/Anime%20Days-${ANIME_DAYS}-brightgreen)
-          ![Manga Days](https://img.shields.io/badge/Manga%20Days-${MANGA_DAYS}-blue)
-          ![Mean Score](https://img.shields.io/badge/Mean%20Score-${MEAN_SCORE}-orange)
-          ![Total Entries](https://img.shields.io/badge/Total%20Entries-${TOTAL_ENTRIES}-purple)
-          EOF
-          )
-
-          BADGES="$BADGES" python - <<'PY'
-          import os, re, pathlib
-          badges = os.environ["BADGES"]
-          path = pathlib.Path("README.md")
-          readme = path.read_text()
-          readme = re.sub(
-              r"<!-- MAL_STATS:START -->.*<!-- MAL_STATS:END -->",
-              f"<!-- MAL_STATS:START -->\n{badges}\n<!-- MAL_STATS:END -->",
-              readme,
-              flags=re.S
-          )
-          path.write_text(readme)
-          PY
-
-      - name: Commit changes
+      - name: Commit and push changes
+        if: steps.generate.outcome == 'success'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --cached --quiet || (git commit -m "Update MAL badges" && git push)
+          git add mal-stats.svg
+          git diff --cached --quiet || (git commit -m "ðŸŽŒ Update MAL stats card" && git push)
