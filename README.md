@@ -3,10 +3,7 @@
 </p>
 
 <div align="center">
-  <a href="mailto:chalsinglalim@gmail.com"><img src="https://img.shields.io/badge/Gmail-1a2f28?style=for-the-badge&logo=gmail&logoColor=458B73"/></a>
   <a href="https://linkedin.com/in/rafaraihan/"><img src="https://img.shields.io/badge/LinkedIn-1a2f28?style=for-the-badge&logo=linkedin&logoColor=458B73"/></a>
-  <a href="https://zekkenwa.github.io/me/"><img src="https://img.shields.io/badge/Portfolio-1a2f28?style=for-the-badge&logo=firefox&logoColor=458B73"/></a>
-  <a href="https://tako.id/Zekkenwa"><img src="https://img.shields.io/badge/Support_Me-1a2f28?style=for-the-badge&logo=ko-fi&logoColor=458B73"/></a>
   <a href="https://github.com/Zekkenwa"><img src="https://komarev.com/ghpvc/?username=Zekkenwa&style=for-the-badge&color=458B73&label=VISITORS"/></a>
 </div>
 
@@ -18,11 +15,11 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=500&color=458B73&vCenter=true&repeat=true&width=500&height=30&lines=Mechanical+Engineer+%7C+Hobbyist+Dev" alt="Typing SVG" />
 </h1>
 
-<img align="right" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGI4YmRjYjExYmRjYjExYmRjYjExYmRjYjExYmRjYjExYmRjYjEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/134vVkHV9wQWqY/giphy.gif" width="180" />
+<img align="right" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="180" />
 
 - :mortar_board: **Associate Degree** in **Mechanical Engineering**
 - :gear: Experienced with **CNC (2-axis & 3-axis)**, Milling, Lathe, CAD (Autodesk, Dassault)
-- :robot: Kinda do a bit **Coding** (Arduino, HTML, type shi)
+- :robot: Passionate about **Coding** (Arduino, HTML, C++, JS, React/Next.js)
 - :trophy: Licensed **Mechanical Maintenance Technician** (LSP LMI)
 - :chart_with_upwards_trend: English Score: **865/990** (TOEIC)
 - :jp: Language: **Japanese (N4 Level)**
